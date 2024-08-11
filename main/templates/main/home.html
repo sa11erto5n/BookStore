@@ -1,11 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends 'main/index.html' %}
+{% load static %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'main/css/home.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <header class="py-2 px-2 d-flex justify-content-between align-items-center animate__animated animate__backInDown">
+    <div class="intro d-flex flex-column">
+      <span class="syne-64 d-flex">What book you're looking for?</span>
+      <span class="syne-16">Explore our catalog and find your next read.</span>
+      <div class="d-flex rounded-pill" id="search-container">
+        <input type="text" class="px-3 py-1 w-100 rounded-pill" placeholder="type name of book or author" id="q" />
+        <button><i class="ph ph-magnifying-glass"></i></button>
+      </div>
+      <div class="d-flex align-items-baseline">
+        <button class="d-flex align-items-center btn btn-yellow mt-4 me-3">
+          Explore
+          <i class="ph ph-binoculars ms-2"></i>
+        </button>
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="image">
+      <img src="{% static '/main/assets/images/header-image.jpg' %}" alt="" srcset="" />
+    </div>
+  </header>
+  <section id="trending">
+    <div class="section-title">tending books</div>
+    <div class="section-content d-flex border rounded-3 p-3 border-dark">
+      <div class="book">
+        <img src="https://images.booksense.com/images/157/342/9781441342157.jpg" />
+        <div class="book-details">
+          <h6>Book Name</h6>
+          <div class="author">
+            <strong>by :</strong>author
+          </div>
+          <div class="description">
+            <strong>description</strong> <br />
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          </div>
+        </div>
+      </div>
+      <div class="book">
+        <img src="https://www.georgerrmartin.com/wp-content/uploads/2013/03/GOTMTI2.jpg" />
+        <div class="book-details">
+          <h6>Book Name</h6>
+          <div class="author">
+            <strong>by :</strong>author
+          </div>
+          <div class="description">
+            <strong>description</strong> <br />
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis officiis, assumenda et accusantium nemo cupiditate iusto numquam aliquid quidem consequatur quas pariatur architecto, velit consequuntur veniam unde illum repellat alias beatae ab totam, amet ullam enim excepturi? Nisi, cupiditate minus porro et reprehenderit alias dolore.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="book">
+        <img src="https://marketplace.canva.com/EAFaQMYuZbo/1/0/1003w/canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg" />
+        <div class="book-details">
+          <h6>Book Name</h6>
+          <div class="author">
+            <strong>by :</strong>author
+          </div>
+          <div class="description">
+            <strong>description</strong> <br />
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          </div>
+        </div>
+      </div>
+      <div class="book">
+        <img src="https://images.penguinrandomhouse.com/cover/9780593422182" />
+        <div class="book-details">
+          <h6>Book Name</h6>
+          <div class="author">
+            <strong>by :</strong>author
+          </div>
+          <div class="description">
+            <strong>description</strong> <br />
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          </div>
+        </div>
+      </div>
+      <div class="book">
+        <img src="https://bukovero.com/wp-content/uploads/2016/07/Harry_Potter_and_the_Cursed_Child_Special_Rehearsal_Edition_Book_Cover.jpg" />
+        <div class="book-details">
+          <h6>Book Name</h6>
+          <div class="author">
+            <strong>by :</strong>author
+          </div>
+          <div class="description">
+            <strong>description</strong> <br />
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="categories">
+    <div class="section-title">Our Categories</div>
+    <div class="section-content d-flex">
+        <a class="btn">Category</a>
+        <a class="btn">Category</a>
+        <a class="btn">Category</a>
+        <a class="btn">Category</a>
+        <a class="btn">Category</a>
+        <a class="btn">Category</a>
+    </div>
+  </section>
+  <section id="authors">
+    <span class="section-title">
+        authors
+    </span>
+    <div class="section-content">
+        <div id="author" class="d-flex flex-column">
+            <img src="{% static 'main\assets\images\author.png' %}" alt="Author Name">
+            <h6 class="syne-16">Lorem, ipsum dolor.</h6>
+        </div>
+        <div id="author" class="d-flex flex-column">
+            <img src="{% static 'main\assets\images\author.png' %}" alt="Author Name">
+            <h6 class="syne-16">Lorem, ipsum dolor.</h6>
+        </div>
+        <div id="author" class="d-flex flex-column">
+            <img src="{% static 'main\assets\images\author.png' %}" alt="Author Name">
+            <h6 class="syne-16">Lorem, ipsum dolor.</h6>
+        </div>
+        <div id="author" class="d-flex flex-column">
+            <img src="{% static 'main\assets\images\author.png' %}" alt="Author Name">
+            <h6 class="syne-16">Lorem, ipsum dolor.</h6>
+        </div>
+        <div id="author" class="d-flex flex-column">
+            <img src="{% static 'main\assets\images\author.png' %}" alt="Author Name">
+            <h6 class="syne-16">Lorem, ipsum dolor.</h6>
+        </div>
+    </div>
+  </section>
+  <section id="news-letter">
+    <span class="section-title">Our News Letter</span>
+    <div class="section-content d-flex justify-content-center align-items-center flex-wrap">
+        <i class="ph ph-paper-plane-tilt"></i>
+        <div class="description d-flex flex-column">
+            <h5 class="syne-18">Subscribe to our newlettre to get the latest books for free</h5>
+            <form action="" class="d-flex">
+                <input type="email" name="email" id="email" placeholder="E-mail adress">
+                <button class="btn" type="submit">Subscribe</button>
+            </form>
+        </div>
+        
+    </div>
+  </section>
+{% endblock %}

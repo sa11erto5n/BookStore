@@ -1,0 +1,78 @@
+#signup-container 
+{
+    max-width: 35vw;
+    min-width: 350px;
+    width: 100%;
+    box-shadow: 13px 12px 7px 0px var(--color-yellow) !important;
+    border: 1px solid var(--color-yellow);
+
+}
+#signup-container * 
+{
+    font-family: var(--font-syne);
+}
+#signup-container h1 
+{
+    font-size: 1.7rem;
+    text-align: center;
+    color: var(--color-gray-600);
+    position: relative;
+    max-width: fit-content;
+    align-self: center;
+}
+#signup-container .errorlist 
+{
+    list-style: none;
+    padding: 5px;
+    background: var(--color-yellow);
+    border-radius: 5px;
+}
+#signup-container form  p 
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5rem !important;
+}
+#signup-container form  input 
+{
+    padding: .5rem;
+    border-radius: 5px;
+    border: 1px solid var(--color-gray-600);
+    position: relative;
+    z-index: 1;
+}
+
+#signup-container form  input:focus-visible
+{
+    outline: none;
+}
+#signup-container form  p:nth-child(3) input
+{
+    margin-bottom: 1rem;
+}
+#signup-container form  p:nth-child(3) a 
+{
+    color: var(--color-gray-600);
+    text-decoration: none;
+}
+#signup-container form > p:nth-child(4)
+{
+    display: none;
+}
+
+#signup-container form button
+{
+    background-color: var(--color-yellow);
+    border: 1px solid var(--color-yellow);
+    border-radius: 5px;
+    margin: auto;
+    padding: 0.5rem 1rem 0.5rem 1rem ;
+    font-size: 1.2rem;
+    width: 85%;
+}
+#signup-container form > div:last-child a
+{
+    border: 1px solid var(--color-yellow) !important;
+    background-color: transparent !important;
+    width: 65%;
+}

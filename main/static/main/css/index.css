@@ -5,6 +5,9 @@
     --color-yellow: #FDBF0F;
     --color-gray-800: #3D3C3C;
     --color-gray-600: #676767;
+
+    --font-syne : 'Syne', sans-serif; 
+    --font-unica : 'Unica One', sans-serif;
 }
 
 /* Classes */

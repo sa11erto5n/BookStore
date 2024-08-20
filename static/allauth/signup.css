@@ -1,7 +1,7 @@
 #signup-container 
 {
     max-width: 35vw;
-    min-width: 350px;
+    min-width: 330px;
     width: 100%;
     box-shadow: 13px 12px 7px 0px var(--color-yellow) !important;
     border: 1px solid var(--color-yellow);
@@ -20,10 +20,15 @@
     max-width: fit-content;
     align-self: center;
 }
-#signup-container .errorlist 
+#signup-container .errorlist
+{
+    padding: 0;
+}
+#signup-container .errorlist li
 {
     list-style: none;
     padding: 5px;
+    margin: 5px 0 5px 0;
     background: var(--color-yellow);
     border-radius: 5px;
 }
@@ -46,16 +51,13 @@
 {
     outline: none;
 }
-#signup-container form  p:nth-child(3) input
-{
-    margin-bottom: 1rem;
-}
+
 #signup-container form  p:nth-child(3) a 
 {
     color: var(--color-gray-600);
     text-decoration: none;
 }
-#signup-container form > p:nth-child(4)
+#signup-container form ul:not(.errorlist)
 {
     display: none;
 }

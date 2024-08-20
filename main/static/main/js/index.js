@@ -55,3 +55,24 @@ sections.forEach(section => {
     section.classList.add('opacity-0');
     intersectionObserver.observe(section);
 });
+
+const menuButton = document.querySelector('.menu-button');
+const menuList = document.querySelector('.menu-list');
+
+// Function to toggle the menu with animation
+menuButton.addEventListener('click', () => {
+    if (menuList.classList.contains('show')) {
+        // Hide the menu with an animation
+        menuList.classList.remove('animate__fadeInDown');
+        menuList.classList.add('animate__animated', 'animate__fadeOutUp');
+
+        // After the animation ends, hide the menu
+        menuList.addEventListener('animationend', () => {
+            menuList.classList.remove('show', 'animate__fadeOutUp', 'animate__animated');
+        }, { once: true });
+
+    } else {
+        // Show the menu with an animation
+        menuList.classList.add('show', 'animate__animated', 'animate__fadeInDown');
+    }
+});

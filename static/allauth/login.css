@@ -1,7 +1,7 @@
 #login-container 
 {
     max-width: 35vw;
-    min-width: 350px;
+    min-width: 330px;
     width: 100%;
     box-shadow: 13px 12px 7px 0px var(--color-yellow) !important;
     border: 1px solid var(--color-yellow);
@@ -21,10 +21,15 @@
     max-width: fit-content;
     align-self: center;
 }
-#login-container .errorlist 
+#login-container .errorlist
+{
+    padding: 0;
+}
+#login-container .errorlist li
 {
     list-style: none;
     padding: 5px;
+    margin: 5px 0 5px 0;
     background: var(--color-yellow);
     border-radius: 5px;
 }
@@ -52,10 +57,6 @@
 {
     color: var(--color-gray-600);
     text-decoration: none;
-}
-#login-container form > p:nth-last-child(2)
-{
-    display: none;
 }
 
 #login-container form button

@@ -29,14 +29,6 @@ INSTALLED_APPS = [
     'allauth.account',
     'main',
 ]
-# All-auth configs
-ACCOUNT_AUTHENTICATION_METHOD = 'email'
-ACCOUNT_EMAIL_REQUIRED  = True 
-ACCOUNT_SESSION_REMEMBER = False
-ACCOUNT_UNIQUE_EMAIL = True
-ACCOUNT_USERNAME_REQUIRED = False
-LOGIN_REDIRECT_URL = 'main:profile'
-ACCOUNT_EMAIL_VERIFICATION = False
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -125,3 +117,12 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# All auth Settings
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED  = True 
+ACCOUNT_SESSION_REMEMBER = False
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_USERNAME_REQUIRED = False
+LOGIN_REDIRECT_URL = 'main:profile'
+ACCOUNT_EMAIL_VERIFICATION = True

@@ -39,8 +39,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-        # Add the account middleware:
+    # Add the account middleware:
     "allauth.account.middleware.AccountMiddleware",
+    # WhiteNoise
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -128,3 +131,5 @@ ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_REQUIRED = False
 LOGIN_REDIRECT_URL = 'main:profile'
 ACCOUNT_EMAIL_VERIFICATION = True
+# WhiteNoise
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
